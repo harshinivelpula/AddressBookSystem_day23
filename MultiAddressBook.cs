@@ -38,5 +38,13 @@ namespace AddressBookSystem3
             multiaddresses[BookName] = book;
 
         }
+        public static AddressBookMain BookName(Dictionary<string, AddressBookMain> addBook)
+        {
+            addressBook = addBook;
+            Console.WriteLine("Enter address book name:");
+            string name = Console.ReadLine();
+            AddressBookMain address = addressBook[name];
+            return address;
+        }
     }
 }
