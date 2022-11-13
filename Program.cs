@@ -13,3 +13,6 @@ collection.MultiCon();
 MultiAddressBook multi = new MultiAddressBook();
 multi.AddBook("AddressBookOne");
 multi.AddContact("AddressBookOne");
+CreateAddressBook createAddressBook = new CreateAddressBook();
+createAddressBook.ReadInput();
+Console.ReadLine();
