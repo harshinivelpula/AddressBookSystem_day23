@@ -7,3 +7,4 @@ AddressBook addressBook = new AddressBook();
 addressBook.Contact();
 addressBook.Add();
 addressBook.Edit();
+addressBook.Delete();
