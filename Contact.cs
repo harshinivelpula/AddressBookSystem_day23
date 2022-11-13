@@ -19,6 +19,8 @@ namespace AddressBookSystem3
     }
     public class AddressBook
     {
+        
+
         public void Contact()
         {
             List<Contact> contactList = new List<Contact>();
@@ -32,7 +34,6 @@ namespace AddressBookSystem3
                 Zip = 987654,
                 phone = 987654321
             });
-
             contactList.Add(new Contact
             {
                 Name = "chocky",
@@ -56,6 +57,7 @@ namespace AddressBookSystem3
 
             contactList.Add(new Contact
             {
+
                 Name = "haswik",
                 Address = "india",
                 city = "mumbai",
@@ -75,6 +77,31 @@ namespace AddressBookSystem3
                 Console.WriteLine(contacts.phone);
                 Console.WriteLine("**************************");
             }
+
+            Console.WriteLine("*******************-----------------------------------------------------------------**************************");
+        }
+
+        public void Add()
+        {
+            Contact createcontact = new Contact();
+
+            Console.WriteLine("Enter Name");
+            createcontact.Name = Console.ReadLine();
+            Console.WriteLine("Enter Address");
+            createcontact.Address = Console.ReadLine();
+            Console.WriteLine("Enter City");
+            createcontact.city = Console.ReadLine();
+            Console.WriteLine("Enter State");
+            createcontact.State = Console.ReadLine();
+            Console.WriteLine("Enter Email");
+            createcontact.email = Console.ReadLine();
+            Console.WriteLine("Enter Zip");
+            createcontact.Zip = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Phone");
+            createcontact.phone = Convert.ToInt32(Console.ReadLine());
+           
+
+
         }
     }
 
