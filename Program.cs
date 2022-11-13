@@ -8,3 +8,5 @@ addressBook.Contact();
 addressBook.Add();
 addressBook.Edit();
 addressBook.Delete();
+Collection collection = new Collection();
+collection.MultiCon();
