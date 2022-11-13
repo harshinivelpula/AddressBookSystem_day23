@@ -104,5 +104,94 @@ namespace AddressBookSystem3
 
         }
     }
+    public void Edit()
+    {
+        Console.WriteLine("Enter The Name to Edit The Contact");
+        string Name = Console.ReadLine();
+        
+        foreach (var conts in contactList)
+        {
+            if (conts.Name == Name)
+            {
+
+
+                // Taking Input by User Which Field want to Edit 
+                Console.WriteLine("1. Name");
+                Console.WriteLine("2. Address");
+                Console.WriteLine("3. City");
+                Console.WriteLine("4. state");
+                Console.WriteLine("5. Email Address");
+                Console.WriteLine("6. Zip Code ");
+                Console.WriteLine("7. Phone Number ");
+
+                Console.WriteLine("Enter the Field number you Want to Edit ");
+                int Choice = Convert.ToInt32(Console.ReadLine());
+
+                // using Switch to Edit The Field Choose By User
+                switch (Choice)
+                {
+                    case 1:
+                        Console.Write("New First Name : ");
+                        string New_Name = Console.ReadLine();
+                        conts.Name = New_Name;
+                        break;
+
+                    case 2:
+                        Console.Write("New Address : ");
+                        string New_Address = Console.ReadLine();
+                        conts.Address = New_Address;
+                        break;
+                    case 3:
+                        Console.Write("New City : ");
+                        string New_City = Console.ReadLine();
+                        conts.city = New_City;
+                        break;
+                    case 4:
+                        Console.Write("New State : ");
+                        string New_State = Console.ReadLine();
+                        conts.State = New_State;
+                        break;
+                    case 5:
+                        Console.Write("New Email Address : ");
+                        string New_Email_Address = Console.ReadLine();
+                        conts.email = New_Email_Address;
+                        break;
+                    case 6:
+                        Console.Write("New Zip Code : ");
+                        int New_Zip_Code = Convert.ToInt32(Console.ReadLine());
+                        conts.Zip = New_Zip_Code;
+                        break;
+                    case 7:
+                        Console.Write("New Phone Number : ");
+                        int New_Phone_Number = Convert.ToInt32(Console.ReadLine());
+                        conts.phone = New_Phone_Number;
+                        break;
+
+                    default:
+                        Console.WriteLine(" Please Enter Correct Choice");
+                        break;
+                }
+
+            }
+            else
+            {
+                Console.WriteLine(" Your Input Didn't Match the List of Contacts");
+            }
+        }
+        
+        foreach (var cont in contactList)
+        {
+            Console.WriteLine(cont.Name);
+            Console.WriteLine(cont.Address);
+            Console.WriteLine(cont.city);
+            Console.WriteLine(cont.State);
+            Console.WriteLine(cont.email);
+            Console.WriteLine(cont.Zip);
+            Console.WriteLine(cont.phone);
+            Console.WriteLine("*******************************************************************");
+
+        }
+    }
+}
 
 }
