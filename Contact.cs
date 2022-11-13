@@ -115,7 +115,7 @@ namespace AddressBookSystem3
             {
 
 
-                // Taking Input by User Which Field want to Edit 
+                // taking input to edit 
                 Console.WriteLine("1. Name");
                 Console.WriteLine("2. Address");
                 Console.WriteLine("3. City");
@@ -127,7 +127,7 @@ namespace AddressBookSystem3
                 Console.WriteLine("Enter the Field number you Want to Edit ");
                 int Choice = Convert.ToInt32(Console.ReadLine());
 
-                // using Switch to Edit The Field Choose By User
+                // using Switch 
                 switch (Choice)
                 {
                     case 1:
@@ -178,7 +178,7 @@ namespace AddressBookSystem3
                 Console.WriteLine(" Your Input Didn't Match the List of Contacts");
             }
         }
-        
+
         foreach (var cont in contactList)
         {
             Console.WriteLine(cont.Name);
@@ -191,7 +191,22 @@ namespace AddressBookSystem3
             Console.WriteLine("*******************************************************************");
 
         }
+        public void Delete()
+        {
+            contactList.Remove(contactList[2]);
+
+            foreach (var contacts in contactList)
+            {
+                Console.WriteLine(contacts.Name);
+                Console.WriteLine(contacts.Address);
+                Console.WriteLine(contacts.city);
+                Console.WriteLine(contacts.State);
+                Console.WriteLine(contacts.email);
+                Console.WriteLine(contacts.Zip);
+                Console.WriteLine(contacts.phone);
+                Console.WriteLine("*******************************************************************");
+            }
+        }
     }
-}
 
 }
