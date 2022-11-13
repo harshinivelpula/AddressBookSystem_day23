@@ -86,5 +86,13 @@ namespace AddressBookSystem3
                 Console.WriteLine("-----------------------------");
             }
         }
+        /// count number of person by city or state
+        public static void CountPerson(Dictionary<string, List<Contacts>> dictionary)
+        {
+            foreach (var person in dictionary)
+            {
+                Console.WriteLine("Number of person {0}:", person.Value.Count);
+            }
+        }
     }
 }
